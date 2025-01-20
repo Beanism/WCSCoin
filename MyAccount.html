@@ -1,0 +1,34 @@
+<html>
+	<head>
+	   <title>WCS Coin - My Account</title>
+		<link rel='stylesheet' href='main.css'>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script src='main.js'></script>
+		<div id="MenubarOuter">
+			<div id="MenubarInner">
+				<button id="HomeButton" class="NavButton" onclick="window.location.href = 'MainPage.html'">Home</button>
+				<button id="StockButton" class="NavButton" onclick="window.location.href = 'Stock.html'">Price</button>
+				<button id="PurchaseButton" class="NavButton" onclick="window.location.href = 'Purchase.html'">Purchase</button>
+				<button id="AccountButton" class="NavButton" onclick="window.location.href = 'MyAccount.html'">My Account</button>
+			</div>
+		</div>
+	</head>
+	<body id="MyAccountPage">
+		<div id="LoginContainer">
+			<form id="LoginForm" action="./Login.php">
+				<label for="UsernameLogin">Username:</label><br>
+				<input id="UsernameLogin" type="text" name="Username" placeholder="Your chosen username."</input><br>
+				<label for="PasswordLogin"  name="PasswordLogin">Password:</label><br>
+				<input id="PasswordLogin" type="password" name="Password" placeholder="Your chosen password."></input><br>
+				<label for="Email" name="PasswordLogin">Email Address:</label><br>
+				<input id="EmailLogin" name="Email" type="text" placeholder="If logging in, leave blank."></input><br>
+				<input type="radio" id="SignUp" name="Method" value="SignUp"></input>
+				<label for="AccountMethod">Sign Up</label><br>
+				<input type="radio" id="Login" name="Method" value="Login"></input>
+				<label for="AccountMethod">Sign In</label><br>
+				<input type="submit" value="Execute"></input>
+			</form>
+		</div>
+		<script>ListenForLoginData()</script>
+	</body>
+</html>
